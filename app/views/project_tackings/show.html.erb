@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @project_tacking.project_id %>
+</p>
+
+<p>
+  <strong>Student:</strong>
+  <%= @project_tacking.student_id %>
+</p>
+
+<p>
+  <strong>Git url:</strong>
+  <%= @project_tacking.git_url %>
+</p>
+
+<p>
+  <strong>Key:</strong>
+  <%= @project_tacking.key %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @project_tacking.value %>
+</p>
+
+<p>
+  <strong>Completed:</strong>
+  <%= @project_tacking.completed %>
+</p>
+
+<p>
+  <strong>Remaining:</strong>
+  <%= @project_tacking.remaining %>
+</p>
+
+<%= link_to 'Edit', edit_project_tacking_path(@project_tacking) %> |
+<%= link_to 'Back', project_tackings_path %>

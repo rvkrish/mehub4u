@@ -1,0 +1,30 @@
+<table  class=" table-data table table-striped table-bordered" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+              <th>Name</th>
+              <th>Experience</th>
+              <th>Field</th>
+              <th>Address</th>
+              <th>User</th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+        </thead>
+       
+        <tbody>
+            <% @teachers.each do |teacher| %>
+              <tr>
+                <td><%= teacher.name %></td>
+                <td><%= teacher.experience %></td>
+                <td><%= teacher.field %></td>
+                <td><%= teacher.address %></td>
+                <td><%= teacher.user_id %></td>
+                <td><%= link_to 'Show', teacher %></td>
+                <td><%= link_to 'Edit', edit_teacher_path(teacher) %></td>
+                <td><%= link_to 'Destroy', teacher, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+        </tbody>
+    </table>
+<%= link_to 'New Teacher', new_teacher_path %>

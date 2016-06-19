@@ -1,0 +1,30 @@
+<ul class="nav nav-pills"  style = "background-color:#154360;color:#fff;padding-top:1%;padding-bottom:1%">
+    
+    <% if user_signed_in? %>
+         <a class="btn btn-default"  href="<%=student_root_path%>" class="btn" >  
+                <i class="fa fa-home front-page-icon-font"></i><br />
+                <%= current_user.email %>
+        </a>
+        <li>
+        </li>
+        
+        <li role="presentation" class="pull-right btn" style="margin:1%;background-color:#fff;"> 
+            <%= link_to "<i class='fa fa-share-alt'></i> Sign Out".html_safe, destroy_user_session_path, method: :delete %>
+        </li>
+        
+        
+    
+    <% else %>
+         <li role="presentation"  style="margin:1%;">  
+          
+        </li>
+        <li role="presentation" class="pull-right btn" style="margin:1%;background-color:#fff;">  
+            <%= link_to "<i class='fa fa-share-alt'></i> Sign Up".html_safe, new_user_registration_path %>
+        </li>
+        <li role="presentation" class="pull-right btn" style="margin:1%;background-color:#fff;">  
+            <%= link_to "<i class='fa fa-sign-in'></i> Sign In".html_safe, new_user_session_path %>
+        </li>
+    <% end %>
+    
+    
+</ul>

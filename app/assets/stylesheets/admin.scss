@@ -1,0 +1,61 @@
+// Place all the styles related to the admin controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.has-arrow-center {
+  
+  background-color:#fff !important;
+  width: 100%;
+  position: relative;
+ // otherwise you will see a small gap
+  
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left:50%;
+    border: (10px) solid transparent;
+    border-bottom: (20px) solid #154360; // larger pixel values make the arrow more pointy
+  }
+}
+.has-arrow-left {
+  
+  background-color:#fff !important;
+  width: 100%;
+  position: relative;
+ // otherwise you will see a small gap
+  
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 15%;
+    border: (10px) solid transparent;
+    border-bottom: (20px) solid #154360; // larger pixel values make the arrow more pointy
+  }
+}
+
+.has-arrow-right {
+  
+  background-color:#fff !important;
+  width: 100%;
+  position: relative;
+ // otherwise you will see a small gap
+  
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left:85%;
+    border: (10px) solid transparent;
+    border-bottom: (20px) solid #154360; // larger pixel values make the arrow more pointy
+  }
+}
+.pagination .active a{
+    background-color:#154360 !important;
+    color: #fff !important;
+}
+.pagination a{
+   color: #154360 !important;
+}

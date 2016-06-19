@@ -1,0 +1,110 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+
+.notice{
+    @extend .alert;
+    @extend .alert-info;
+    
+}
+.default-color{
+    background-color:#154360 !important;
+    color:#fff !important;
+}
+.front-page-icon-font{
+    font-size: 60px;
+}
+.menu-icon-font{
+    font-size: 30px;
+}
+.popover{
+    max-width: 100%; /* Max Width of the popover (depending on the container!) */
+}
+.popover-inside-button{
+    width:100%; 
+    margin:2%;  
+}
+
+// Spinner
+
+.spinner {
+  display: inline-block;
+  opacity: 0;
+  width: 0;
+
+  -webkit-transition: opacity 0.25s, width 0.25s;
+  -moz-transition: opacity 0.25s, width 0.25s;
+  -o-transition: opacity 0.25s, width 0.25s;
+  transition: opacity 0.25s, width 0.25s;
+}
+
+.has-spinner.active {
+  cursor:progress;
+}
+
+.has-spinner.active .spinner {
+  opacity: 1;
+  width: auto; /* This doesn't work, just fix for unkown width elements */
+}
+
+.has-spinner.btn-mini.active .spinner {
+    width: 10px;
+}
+
+.has-spinner.btn-small.active .spinner {
+    width: 13px;
+}
+
+.has-spinner.btn.active .spinner {
+    width: 16px;
+}
+
+.has-spinner.btn-large.active .spinner {
+    width: 19px;
+}
+
+.video-box{
+    height:220px;
+    width:391px;
+    position:relative;
+}
+
+.video-thumbnail{
+    z-index:300;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+}
+
+.video-frame{
+    z-index:100;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+}
+
+.thumbnail-link .video-thumbnail{
+    display:block;
+}
+
+.thumbnail-link:hover .video-thumbnail{
+    display:none;
+}

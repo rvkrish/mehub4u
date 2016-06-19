@@ -1,0 +1,65 @@
+<div class = "col-sm-4 col-sm-offset-4">
+   <div class="panel panel-default manage-tabs manage-students-panel">
+     <div class="panel-heading default-color"> Student Information</div>
+      <div class = "panal-body" style = "margin-left:4%">
+        <p id="notice"><%= notice %></p>
+        <div class="row form-group">
+          <div class="col-sm-6">
+            <strong>Name:</strong>
+          </div>
+          <div class="col-sm-6">
+            <%= @student.name %>
+          </div>
+        </div>
+         <div class="row form-group">
+          <div class="col-sm-6">
+            <strong>College:</strong>
+          </div>
+          <div class="col-sm-6">
+            <%= @student.college %>
+          </div>
+        </div>
+        <div class="row form-group">
+          <div class="col-sm-6">
+            <strong>Branch:</strong>
+          </div>
+          <div class="col-sm-6">
+            <%= @student.branch %>
+          </div>
+        </div>
+        <div class="row form-group">
+          <div class="col-sm-6">
+            <strong>Year:</strong>
+          </div>
+          <div class="col-sm-6">
+            <%= @student.year %>
+          </div>
+        </div>
+        <div class="row form-group">
+          <div class="col-sm-6">
+            <strong>Address</strong>
+          </div>
+          <div class="col-sm-6">
+            <%= @student.address %>
+          </div>
+        </div>
+        <div class="row form-group">
+          <div class="col-sm-6">
+            <strong>User</strong>
+          </div>
+          <div class="col-sm-6">
+            <%= @student.user_id %>
+          </div>
+        </div>
+        <div class="row form-group">
+          <div class="col-sm-6 col-sm-offset-6">
+            <%= link_to 'Edit', edit_student_path(@student),  class: "btn btn-default"%>
+            <%= link_to 'Back', admin_index_path,  class: "btn btn-default" %>
+          </div>
+        </div>
+        
+        
+      </div>
+    </div>
+  
+</div>

@@ -1,0 +1,10 @@
+<ul class="nav nav-pills"  style = "background-color:#154360;color:#fff;padding-top:1%;padding-bottom:1%">
+    <li role="presentation" class="pull-right btn" style="margin:1%;background-color:#fff;">  
+        <%= link_to "<i class='fa fa-sign-in'></i> Log Out".html_safe, destroy_user_session_path, method: :delete  %>
+    </li>
+    <button type="button" role="presentation" class="btn" style="margin:1%;background-color:#fff;color:#666 !important;" data-container="body" data-toggle="popover" data-placement="bottom" data-content= '<%= render partial: "layouts/admin_tools" %>'.html_safe style ="width:100%">  
+        <i class='fa fa-bars menu-icon-font'></i><br />
+        Manage
+    </button>
+    
+</ul>

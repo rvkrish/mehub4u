@@ -1,0 +1,2 @@
+module AssignmentTrackingsHelper
+end

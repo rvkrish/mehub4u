@@ -1,0 +1,62 @@
+<%= form_for(@student_course) do |f| %>
+  <% if @student_course.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@student_course.errors.count, "error") %> prohibited this student_course from being saved:</h2>
+
+      <ul>
+      <% @student_course.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class = "col-sm-4 col-sm-offset-4">
+   <div class="panel panel-default manage-tabs manage-students-panel">
+     <div class="panel-heading default-color"> Student Information</div>
+      <div class = "panal-body" style = "margin-left:4%">
+        <div class="row form-group">
+          <div class="col-sm-6">
+            <strong><%= f.label :student_id %><br></strong>
+          </div>
+          <div class="col-sm-6">
+            <%= f.text_field :student_id %>
+          </div>
+        </div>
+         <div class="row form-group">
+          <div class="col-sm-6">
+            <strong><%= f.label :course_id %></strong>
+          </div>
+          <div class="col-sm-6">
+            <%= f.text_field :course_id %>
+          </div>
+        </div>
+        <div class="row form-group">
+          <div class="col-sm-6">
+            <strong><%= f.label :teacher_id %></strong>
+          </div>
+          <div class="col-sm-6">
+            <%= f.text_field :teacher_id %>
+          </div>
+        </div>
+        <div class="row form-group">
+          <div class="col-sm-6">
+            <strong><%= f.label :state %></strong>
+          </div>
+          <div class="col-sm-6">
+            <%= f.text_field :state %>
+          </div>
+        </div>
+        <div class="row form-group">
+          <div class="col-sm-6 col-sm-offset-6">
+             <%= f.submit "Submit", class: "btn btn-default"%>
+            <%= link_to 'Back', admin_index_path,  class: "btn btn-default" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+  </div>
+
+<% end %>

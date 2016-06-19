@@ -1,0 +1,29 @@
+<div class="col-sm-12 text-center">
+    <div class="panel panel-default">
+        <div class="panel-heading default-color">Enter Your Credit Card Information.....!</div>
+        <div class="panel-body">
+            <i class="fa fa-credit-card front-page-icon-font"></i>
+            <div class="form-group">
+             <%= form_for CreditCard.new,:url => "/test" do |f| %>
+                  <div class= "col-sm-12">
+                      <%= f.text_field :name , class: "form-control",placeholder: "Entere Your Name" %><br />
+                  </div>
+                  <div class= "col-sm-12">
+                      <%= f.text_field :name , class: "form-control",placeholder: "Entere Credit Card Number" %><br />
+                  </div>
+                  <div class= "col-sm-6">
+                      <%= f.text_field :name , class: "form-control",placeholder: "Exp. Month" %>
+                  </div>
+                  <div class= "col-sm-4">
+                      <%= f.text_field :name , class: "form-control",placeholder: "Exp. Year" %><br />
+                  </div>
+                  <div class= "col-sm-6">
+                      <%= f.text_field :name , class: "form-control",placeholder: "Enter Cvv" %>
+                  </div>
+                 
+            <% end %>   
+                
+            </div>
+        </div>
+    </div>
+</div>

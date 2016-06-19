@@ -1,0 +1,9 @@
+
+
+<ul class="list-group">
+    <% @free_courses.each{ |course|%>
+        <li class="list-group-item list-group-item-info" style="line-height:30px;" >
+            <%= link_to "#{course.course_name}:#{course.course_description}", videos_list_video_path(course_id: course.id) %>
+        </li><br />
+    <% } %>
+</ul>

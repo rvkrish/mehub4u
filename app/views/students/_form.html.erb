@@ -1,0 +1,68 @@
+<%= form_for(@student) do |f| %>
+  <% if @student.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@student.errors.count, "error") %> prohibited this student from being saved:</h2>
+
+      <ul>
+      <% @student.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+ <div class = "col-sm-4 col-sm-offset-4">
+   <div class="panel panel-default manage-tabs manage-students-panel">
+     <div class="panel-heading default-color"> Student Information</div>
+      <div class = "panal-body" style = "margin-left:4%">
+        <div class="row form-group">
+          <div class="col-sm-6">
+            <strong><%= f.label :name %><br></strong>
+          </div>
+          <div class="col-sm-6">
+            <%= f.text_field :name %>
+          </div>
+        </div>
+         <div class="row form-group">
+          <div class="col-sm-6">
+            <strong><%= f.label :college %></strong>
+          </div>
+          <div class="col-sm-6">
+            <%= f.text_field :college %>
+          </div>
+        </div>
+        <div class="row form-group">
+          <div class="col-sm-6">
+            <strong><%= f.label :branch %></strong>
+          </div>
+          <div class="col-sm-6">
+            <%= f.text_field :branch %>
+          </div>
+        </div>
+        <div class="row form-group">
+          <div class="col-sm-6">
+            <strong><%= f.label :year %></strong>
+          </div>
+          <div class="col-sm-6">
+            <%= f.number_field :year %>
+          </div>
+        </div>
+        <div class="row form-group">
+          <div class="col-sm-6">
+            <strong><%= f.label :address %></strong>
+          </div>
+          <div class="col-sm-6">
+            <%= f.text_area :address %>
+          </div>
+        </div>
+        <div class="row form-group">
+          <div class="col-sm-6 col-sm-offset-6">
+             <%= f.submit "Submit", class: "btn btn-default"%>
+            <%= link_to 'Back', admin_index_path,  class: "btn btn-default" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+</div>
+<% end %>

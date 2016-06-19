@@ -1,0 +1,36 @@
+
+<div class="container">
+    <div class="row">
+             <%= render partial: "student" %>
+             <%= render partial: "courses" %>
+             <%= render partial: "faculty" %>
+    </div>
+</div>
+<br />
+
+<div class="row">
+    
+<div class="col-sm-10 col-sm-offset-1 text-center">
+    
+        <div class="panel panel-default manage-tabs manage-students-panel">
+            <div class="has-arrow-left">
+                <div class="panel-body">
+                    <%= render  partial: "students/index" %>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default manage-tabs manage-courses-panel" style = "display:none;">
+            <div class="has-arrow-center">
+                <div class="panel-body">
+                    <%= render  partial: "courses/index" %>
+                </div>
+            </div>
+        </div>
+         <div class="panel panel-default manage-tabs manage-teachers-panel" style = "display:none;">
+            <div class="has-arrow-right">
+                <div class="panel-body">
+                    <%= render  partial: "teachers/index" %>
+                </div>
+            </div>
+        </div>
+</div>

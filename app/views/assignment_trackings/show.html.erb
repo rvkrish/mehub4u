@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Assignment:</strong>
+  <%= @assignment_tracking.assignment_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @assignment_tracking.user_id %>
+</p>
+
+<p>
+  <strong>Topic:</strong>
+  <%= @assignment_tracking.topic %>
+</p>
+
+<p>
+  <strong>Solution:</strong>
+  <%= @assignment_tracking.solution %>
+</p>
+
+<p>
+  <strong>Git url:</strong>
+  <%= @assignment_tracking.git_url %>
+</p>
+
+<%= link_to 'Edit', edit_assignment_tracking_path(@assignment_tracking) %> |
+<%= link_to 'Back', assignment_trackings_path %>

@@ -1,0 +1,12 @@
+<ul class="list-group">
+    <% @courses.each{ |course|%>
+        <li class="list-group-item list-group-item-info" style="line-height:30px;" >
+            <%= course.course_name %>:  
+            <%= course.course_description %>
+            <div class="btn btn-default pull-right has-spinner spinner-btn" course_id = '<%= course.id %>' student_id = '<%= current_user.student.id%>'>
+                <span class="text-val">Apply For This Course</span>
+                <span class="spinner"><i class="fa fa-refresh fa-spin"></i></span>
+            </div> 
+        </li><br />
+    <% } %>
+</ul>

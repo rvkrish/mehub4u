@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  college: MyString
+  branch: MyString
+  year: 1
+  address: MyText
+  user_id: 1
+
+two:
+  name: MyString
+  college: MyString
+  branch: MyString
+  year: 1
+  address: MyText
+  user_id: 1

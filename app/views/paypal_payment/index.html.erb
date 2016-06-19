@@ -1,0 +1,20 @@
+<%= form_tag paypal_payment_send_payment_path do %>
+ <div class="col-md-4"> 
+ </div>
+ <div class="col-md-4">
+     <% if flash[:error].present? %>
+         <div class="alert alert-danger">
+            <%= flash[:error]  %> 
+            <% flash.delete(:error) %>
+         </div>
+     <% end %>
+     <div class="centered default-color-border" >
+        <br />
+        <%= render :partial => "payment_partial" %>    
+            <br />
+     </div>
+ </div>
+ <div class="col-md-4">
+ </div>
+ 
+<% end %>

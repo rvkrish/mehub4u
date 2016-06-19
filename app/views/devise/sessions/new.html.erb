@@ -1,0 +1,47 @@
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+ 
+<div class = "col-sm-4 col-sm-offset-4">
+   <div class="panel panel-default manage-tabs manage-students-panel">
+     <div class="panel-heading default-color"> Log In</div>
+      <div class = "panal-body" style = "margin-left:4%">
+        <p id="notice"><%= notice %></p>
+        <div class="row form-group">
+          <div class="col-sm-6">
+            <strong> <%= f.label :email %></strong>
+          </div>
+          <div class="col-sm-6">
+             <%= f.text_field :email, autofocus: true %>
+          </div>
+        </div>
+         <div class="row form-group">
+          <div class="col-sm-6">
+            <strong> <%= f.label :password %></strong>
+          </div>
+          <div class="col-sm-6">
+            <%= f.password_field :password %>
+          </div>
+        </div>
+        
+        <div class="row form-group">
+          <div class="col-sm-6">
+            <strong> <%= f.check_box :remember_me %></strong>
+            <%= f.label :remember_me %>
+          </div>
+          <div class="col-sm-6">
+            <%= f.submit "Log In", class: "btn btn-default pull-center"%>
+          </div>
+        </div>
+        <div class="row form-group">
+          <div class="col-sm-6 col-sm-offset-6">
+             <%= render "devise/shared/links" %>
+          </div>
+        </div>
+    
+      </div>
+    </div>
+  
+</div>
+<% end %>
+
+
+
