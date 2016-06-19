@@ -75,3 +75,5 @@ gem 'activemerchant'
 gem 'habtm_generator', :group => :development
 
 gem 'simple_form'
+
+gem 'ratyrate'
